@@ -1,0 +1,53 @@
+name: library_database
+description: A library management system.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 0.0.1+1
+
+environment:
+  sdk: '>=2.19.4 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  english_words: ^4.0.0
+  provider: ^6.0.0
+  flutter_markdown: ^0.6.14
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.13.0
+  path: any
+  window_size:
+    git:
+      url: https://github.com/google/flutter-desktop-embedding.git
+      path: plugins/window_size
+      ref: main
+  flutter_lints: ^2.0.0
+  mysql_utils: ^2.1.1
+  
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/background.jpg
+
+flutter_icons:
+  remove_alpha_ios: true
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icons/icon.jpg"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  web:
+    generate: true
+    image_path: "assets/icons/icon.jpg"
+    background_color: "#hexcode"
+    theme_color: "#hexcode"
+  windows:
+    generate: true
+    image_path: "assets/icons/icon.jpg"
+    icon_size: 48 # min:48, max:256, default: 48
+  macos:
+    generate: true
+    image_path: "assets/icons/icon.jpg"
